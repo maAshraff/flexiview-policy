@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - FlexiView</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-[#0A0A0A] text-[#EDEDED] min-h-screen antialiased selection:bg-[#5E6AD2]/30 selection:text-white">
+    <div class="max-w-3xl mx-auto px-6 py-16 md:py-24">
+        <!-- Header -->
+        <header class="mb-12 border-b border-zinc-800/80 pb-8">
+            <div class="flex items-center gap-2.5 mb-4">
+                <span class="inline-block w-3.5 h-3.5 bg-[#5E6AD2] rounded-full animate-pulse shadow-[0_0_12px_rgba(94,106,210,0.5)]"></span>
+                <span class="text-xs font-mono tracking-widest text-[#5E6AD2] uppercase font-bold">Privacy Policy</span>
+            </div>
+            <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight text-white mb-3">FlexiView</h1>
+            <p class="text-sm font-mono text-[#A1A1AA] mb-1">Responsive Mobile Simulator Chrome Extension</p>
+            <p class="text-xs text-zinc-500">Effective Date: November 8, 2026</p>
+        </header>
+
+        <!-- Main Content -->
+        <main class="space-y-10 text-zinc-300 leading-relaxed">
+            
+            <section>
+                <h2 class="text-2xl font-bold text-white mb-4">1. Introduction</h2>
+                <p>Welcome to FlexiView. We built this tool to provide frontend developers with a fast, reliable, and completely client-side responsive mobile testing environment. Because we are developers ourselves, we respect your privacy. <strong>FlexiView does not track your browsing history, does not collect personal data, and does not require an account.</strong></p>
+            </section>
+
+            <section>
+                <h2 class="text-2xl font-bold text-white mb-4">2. Core Architecture & Data Privacy</h2>
+                <p class="mb-4">FlexiView operates 100% locally within your Chrome browser. When you use the simulator, the websites you test and the data you generate (like screenshots or custom device dimensions) remain entirely on your local machine.</p>
+                <ul class="list-disc pl-5 space-y-2 text-zinc-400">
+                    <li>We do not proxy your web traffic through external servers.</li>
+                    <li>We do not use analytics trackers (like Google Analytics) inside the extension.</li>
+                    <li>We do not have access to your local storage, cookies, or the DOM of the sites you test.</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2 class="text-2xl font-bold text-white mb-4">3. Chrome Permissions Justification</h2>
+                <p class="mb-4">To function properly, FlexiView requires the following Chrome Web Store permissions. Here is exactly why we need them:</p>
+                <div class="space-y-4">
+                    <div class="bg-[#141414] border border-zinc-800 p-5 rounded-lg">
+                        <h3 class="text-white font-mono text-sm font-bold mb-1">declarativeNetRequest</h3>
+                        <p class="text-sm text-zinc-400">Required to dynamically remove <code class="text-zinc-300">X-Frame-Options</code> and <code class="text-zinc-300">Content-Security-Policy</code> headers locally. This allows you to test external websites inside our simulator iframes. These rules are only active when the FlexiView tab is open.</p>
+                    </div>
+                    <div class="bg-[#141414] border border-zinc-800 p-5 rounded-lg">
+                        <h3 class="text-white font-mono text-sm font-bold mb-1">storage</h3>
+                        <p class="text-sm text-zinc-400">Required to save your preferred device configurations (e.g., active devices, zoom level, custom dimensions) locally via <code class="text-zinc-300">chrome.storage.local</code> so they persist between sessions.</p>
+                    </div>
+                    <div class="bg-[#141414] border border-zinc-800 p-5 rounded-lg">
+                        <h3 class="text-white font-mono text-sm font-bold mb-1">scripting & tabs</h3>
+                        <p class="text-sm text-zinc-400">Required to inject our local event-synchronization script into the iframes. This is what allows scrolling, clicking, and typing to mirror across multiple devices with zero latency.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h2 class="text-2xl font-bold text-[#5E6AD2] mb-4 flex items-center gap-2">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                    4. Monetization & Mellowtel
+                </h2>
+                <p class="mb-4">FlexiView is 100% free. To keep the project sustainable without injecting ads or paywalls, we have integrated the <strong>Mellowtel</strong> open-source library.</p>
+                <p class="mb-4">Mellowtel allows you to voluntarily share a small fraction of your unused internet bandwidth to help trusted AI companies route traffic. This is strictly an <strong>opt-in</strong> feature.</p>
+                <ul class="list-disc pl-5 space-y-2 text-zinc-400">
+                    <li>If you choose to opt-in via our onboarding modal, Mellowtel will route background traffic through your IP.</li>
+                    <li>If you decline, you can continue using FlexiView entirely for free without any bandwidth sharing.</li>
+                    <li><strong>Mellowtel does NOT have access to your personal data, browsing history, or the websites you test in FlexiView.</strong></li>
+                    <li>You can revoke your consent and opt-out at any time from the FlexiView settings panel.</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2 class="text-2xl font-bold text-white mb-4">5. Contact & Open Source</h2>
+                <p>If you have any questions about this Privacy Policy, or if you want to inspect our data practices, please reach out to us or view our source code (if applicable).</p>
+                <p class="mt-4">
+                    <a href="mailto:support@flexiview.io" class="text-[#5E6AD2] hover:text-white transition-colors underline decoration-[#5E6AD2]/30 underline-offset-4">support@flexiview.io</a>
+                </p>
+            </section>
+        </main>
+    </div>
+</body>
+</html>
